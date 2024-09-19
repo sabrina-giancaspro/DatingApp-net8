@@ -13,5 +13,5 @@ public class Photo
     //navigation prop
     //one to many
     public int AppUserId { get; set; }
-    public AppUser AppUser {get; set;} = null;
+    public AppUser AppUser {get; set;} = null!;
 }
