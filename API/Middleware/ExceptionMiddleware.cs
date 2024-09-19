@@ -1,7 +1,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace API;
+namespace API.Middleware;
 
 public class ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IHostEnvironment env)
 {
