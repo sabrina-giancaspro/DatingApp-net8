@@ -1,15 +1,52 @@
 .card:hover img {
-    transform: scale(1.2, 1.2);
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
+    transform: scale(1.2);
+    transition: transform 500ms ease-out;
 }
 
 .card img {
-    transform: scale(1.0, 1.0);
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
+    transform: scale(1);
+    transition: transform 500ms ease-out;
 }
 
-.card-img-wrapper{
+.card-img-wrapper {
     overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.card-img-wrapper:hover .member-icons {
+    bottom: 0;
+    opacity: 1;
+}
+
+.animate {
+    transition: all 0.3s ease-in-out;
+}
+
+.member-icons {
+    position: absolute;
+    bottom: -30px; 
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transition: bottom 300ms ease, opacity 300ms ease;
+}
+
+.card .member-icons .list-inline-item button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    line-height: 1;
+}
+
+.card .member-icons .btn {
+    width: auto;
+    height: auto;
+}
+
+.list-inline {
+    margin-bottom: 0;
 }
